@@ -27,11 +27,14 @@ import { writeFileSync, mkdirSync, readFileSync } from 'node:fs';
 
 // --- Sources ----------------------------------------------------------------
 const ADS_ID    = '1mXaJWC2Eecu7eSwQ8UkamO_sLCIuZCtI5u7tA0YRYFU';
-const BUYERS_ID = '1Qe1_LFcrd98hhOTa5rJAL78ZRUoHCZ-Pj4kIRgdiljI';
-const SALES_TAB = 'Imersão 0 ao Lucro 3';        // aba dos compradores (gid 2093645749)
+const BUYERS_ID  = '1Qe1_LFcrd98hhOTa5rJAL78ZRUoHCZ-Pj4kIRgdiljI';
+const SALES_GID  = '2093645749';                 // aba "Imersão 0 ao Lucro 3"
+const SALES_TAB  = 'Imersão 0 ao Lucro 3';       // só rótulo p/ exibição
 
+// Lemos a aba pelo GID (determinístico): esta planilha tem várias abas com nomes
+// parecidos ("Imersão 0 ao Lucro" 1/2/3) e o gviz por NOME resolve a errada.
 const SHEET_ADS   = `https://docs.google.com/spreadsheets/d/${ADS_ID}/export?format=csv&gid=0`;
-const SHEET_SALES = `https://docs.google.com/spreadsheets/d/${BUYERS_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SALES_TAB)}`;
+const SHEET_SALES = `https://docs.google.com/spreadsheets/d/${BUYERS_ID}/export?format=csv&gid=${SALES_GID}`;
 
 const ADS_URL    = `https://docs.google.com/spreadsheets/d/${ADS_ID}/edit`;
 const BUYERS_URL = `https://docs.google.com/spreadsheets/d/${BUYERS_ID}/edit`;
