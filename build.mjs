@@ -8,7 +8,7 @@
 //   1) Métricas dos Anúncios — aba "Meta Ads": Day / Campaign Name / Ad Set Name /
 //      Ad Name / Amount Spent / Impressions / Link Clicks / Landing Page Views /
 //      Checkouts Initiated. One row per day×campaign×conjunto×anúncio.
-//   2) Lista de Compradores — aba "Imersão 0 ao Lucro 3":
+//   2) Lista de Compradores — aba "Imersão 0 ao Lucro 4":
 //      Data / Nome / Email / Valor da Compra / Forma de Pagto / Utm_source /
 //      utm_campaign / utm_medium / utm_content / Utm_term / Origem de Checkout / DATA (UTC-3).
 //      One row per sale. ATRIBUIÇÃO DO CRIATIVO vem das UTMs (nesta conta o
@@ -28,8 +28,8 @@ import { writeFileSync, mkdirSync, readFileSync } from 'node:fs';
 // --- Sources ----------------------------------------------------------------
 const ADS_ID    = '1mXaJWC2Eecu7eSwQ8UkamO_sLCIuZCtI5u7tA0YRYFU';
 const BUYERS_ID  = '1Qe1_LFcrd98hhOTa5rJAL78ZRUoHCZ-Pj4kIRgdiljI';
-const SALES_GID  = '2093645749';                 // aba "Imersão 0 ao Lucro 3"
-const SALES_TAB  = 'Imersão 0 ao Lucro 3';       // só rótulo p/ exibição
+const SALES_GID  = '1083963375';                 // aba "Imersão 0 ao Lucro 4"
+const SALES_TAB  = 'Imersão 0 ao Lucro 4';       // só rótulo p/ exibição
 
 // Lemos a aba pelo GID (determinístico): esta planilha tem várias abas com nomes
 // parecidos ("Imersão 0 ao Lucro" 1/2/3) e o gviz por NOME resolve a errada.

@@ -10,7 +10,7 @@ sozinho **100% na nuvem** a cada 2 h. Nada roda no seu PC.
 
 1. `build.mjs` (Node, sem dependências) roda no GitHub Actions:
    - lê a planilha de **anúncios** (aba *Meta Ads*) e a de **compradores** (aba
-     *Imersão 0 ao Lucro 3*);
+     *Imersão 0 ao Lucro 4*);
    - considera **apenas vendas de 01/09/2026 em diante** (lançamento Imersão-SET26);
      o lançamento anterior, que vive na mesma planilha, é descartado;
    - atribui cada venda ao anúncio pelas UTMs
